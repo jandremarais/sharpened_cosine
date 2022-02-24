@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Sharp Viz</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+  </head>
+
+  <body>
+    <label for="p-input">P</label>
+    <input id="p-input" type="number" name="p" value="1">
+    <label for="q-input">Q</label>
+    <input id="q-input" type="number" name="q" value="0.001">
+    <div class="list-in-container">
+      <label for="signal-in">Signal</label>
+      <input id='signal-in' type="text" name="signal" value="0,0,0,1,2,3">
+      <label for="kernel-in">Kernel</label>
+      <input id="kernel-in" type="text" name="kernel" value="1,2,3">
+
+    </div>
+    <button hx-post="/process" hx-target="#result"
+      hx-include="[name='p'],[name='q'],[name='signal'],[name='kernel']">Submit</button>
+    <div id="result"></div>
+  </body>
+
+</html>

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sharp"
+version = "0.1.0"
+description = ""
+authors = ["jan-marais <janmarais@shoprite.co.za>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^1.10.2"
+numpy = "^1.22.2"
+fastapi = "^0.74.1"
+uvicorn = "^0.17.5"
+Jinja2 = "^3.0.3"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.9.1"
+black = "^22.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,48 @@
+<div class="result-container">
+  <h3>Kernel</h3>
+  <div class="kernel positive">
+    {% for value in result.kernel %}
+    <div class="value" style="height: {{(100)*value if value > 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <div class="kernel negative">
+    {% for value in result.kernel %}
+    <div class="value" style="height: {{(-100)*value if value < 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <h3>Signal</h3>
+  <div class="positive">
+    {% for value in result.signal %}
+    <div class="value" style="height: {{(100)*value if value > 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <div class="negative">
+    {% for value in result.signal %}
+    <div class="value" style="height: {{(-100)*value if value < 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <h3>Convolution</h3>
+  <div class="positive">
+    {% for value in result.convolution %}
+    <div class="value" style="height: {{(100)*value if value > 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <div class="negative">
+    {% for value in result.convolution %}
+    <div class="value" style="height: {{(-100)*value if value < 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <h3>Sharpened Cosine Similarity</h3>
+  <div class="positive">
+    {% for value in result.scs %}
+    
+    <div class="value" style="height: {{(100)*value if value > 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+  <div class="negative">
+    {% for value in result.scs %}
+    <div class="value" style="height: {{(-100)*value if value < 0 else 0 }}%;"></div>
+    {% endfor %}
+  </div>
+
+</div>
